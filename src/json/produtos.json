@@ -1,0 +1,62 @@
+[
+    {
+        "id":0,
+        "produto": "feijoada",
+        "preco": "R$20,00",
+        "tipo": "refeicao"
+    },
+    {
+        "id":1,
+        "produto": "coxinha",
+        "preco": "R$10,00",
+        "tipo": "salgado"
+    },
+    {
+        "id":2,
+        "produto": "feijão tropeiro",
+        "preco": "R$20,00",
+        "tipo": "refeicao"
+    },
+    {
+        "id":3,
+        "produto": "feijão de corda",
+        "preco": "R$20,00",
+        "tipo": "refeicao"
+    },
+    {
+        "id":4,
+        "produto": "pão de queijo",
+        "preco": "R$20,00",
+        "tipo": "salgado"
+    },
+    {
+        "id":5,
+        "produto": "arroz carreteiro",
+        "preco": "R$20,00",
+        "tipo": "refeicao"
+    },
+    {
+        "id":6,
+        "produto": "chimarrão",
+        "preco": "R$20,00",
+        "tipo": "bebida"
+    },
+    {
+        "id":7,
+        "produto": "açai",
+        "preco": "R$20,00",
+        "tipo": "sobremesa"
+    },
+    {
+        "id":8,
+        "produto": "caldo de cana",
+        "preco": "R$20,00",
+        "tipo": "bebida"
+    },
+    {
+        "id":9,
+        "produto": "arroz com feijão",
+        "preco": "R$20,00",
+        "tipo": "refeicao"
+    }
+]

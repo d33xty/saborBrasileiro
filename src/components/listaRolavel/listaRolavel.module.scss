@@ -1,0 +1,48 @@
+.listaContainer{
+    text-align: center;
+    padding: 0 2.5rem;
+    & h3{
+        text-transform: uppercase;
+        color: #FF2D2D;
+        font-size: 1.5rem;
+    }
+    & div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            & li{
+                width: 31%;
+            }
+            margin-bottom: 1rem;
+
+        }
+
+        & button{
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    }
+
+    &_link{
+        color: #FF2D2D;
+        text-decoration: none;
+        font-size: 1rem;
+        border: 1px solid #FF2D2D;
+        border-radius: 5px;
+        padding: .5rem;
+        font-weight: bold;
+    }
+}

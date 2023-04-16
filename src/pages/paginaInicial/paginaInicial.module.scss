@@ -1,0 +1,153 @@
+.paginaInicial{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.header_container{
+    padding: 0 2.5rem;
+    background-image: url(../../../public/assets/img/headerBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+
+    &_h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 0;
+        & h1{
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: 400;
+            align-self: center;
+            width: 35%;
+            & span{
+                color: #FF2D2D;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+.promocao{
+    padding:2.5rem;
+}
+
+.promocao_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & img{
+        min-width: 30%;
+        border-radius: 10px;
+    }
+
+    &_texto{
+        min-width: 40%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &_container{
+            margin: 2.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & p{
+                font-size: 2rem;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0;
+
+                &:last-child{
+                    border: 2px dashed #FF2D2D;
+                    border-radius: 5px;
+                    padding: .2rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &_button{
+            background-color: #FF2D2D;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #FFF;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.bannerSecundario{
+    padding: 0 2.5rem;
+}
+
+.bannerSecundario div{
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),url('../../assets/comida-mineira.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    & h2{
+        color: #FFF;
+        width: 40%;
+        font-weight: 400;
+        font-size: 2rem;
+        text-align: center;
+        & span{
+            font-weight: bold;
+            border-bottom: 1px solid #FFF;
+        }
+    }
+}
+
+@media(max-width: 475px) {
+    .header_container{
+        padding: 0 1rem;
+        
+        &_h1{
+            & h1{
+                width: 100%;
+            }
+        }
+    }
+
+    .bannerSecundario{
+        padding: 0 1rem;
+    }
+    .bannerSecundario div{
+        flex-direction: column;
+        & h2{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .header_container{
+        padding: 0 1rem;
+        
+        &_h1{
+            & h1{
+                width: 80%;
+            }
+        }
+    }
+}
