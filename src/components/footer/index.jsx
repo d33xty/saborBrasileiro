@@ -7,14 +7,16 @@ import styles from './footer.module.scss'
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-        <div>
+        <section>
+            <div>
             <Logo className={styles.logo}></Logo>
+            </div>
             <nav>
                 <Link className={styles.link}>acesso</Link>
                 <Link className={styles.link}>acesso</Link>
                 <Link className={styles.link}>acesso</Link>
             </nav>
-        </div>
+        </section>
         <p><AiOutlineCopyrightCircle></AiOutlineCopyrightCircle>copyright by saborbrasileiro</p>
     </footer>
   )
