@@ -29,7 +29,7 @@ export default function PaginaInicial() {
                 <p>{produtos[0].produto}</p>
                 <p>35,50R$</p>
               </div>
-              <Link to={"/"} className={styles.promocao_container_texto_button}>ver mais</Link>
+              <Link to={"/cardapio"} className={styles.promocao_container_texto_button}>ver mais</Link>
             </div>
           </div>
         </section>

@@ -17,7 +17,7 @@ export default function ListaRolavel({produtos}) {
           </ul>
           <button><AiOutlineRight></AiOutlineRight></button>
         </div>
-        <Link className={styles.listaContainer_link}>ver cardapio</Link>
+        <Link to={"/cardapio"} className={styles.listaContainer_link}>ver cardapio</Link>
     </div>
   )
 }

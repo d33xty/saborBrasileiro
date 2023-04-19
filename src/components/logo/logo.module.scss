@@ -1,7 +1,12 @@
 .logo_container{
+    text-decoration: none;
+}
+
+.logo_container div{
     display: flex;
     align-items: center;
     font-size: 1.5rem;
+    text-decoration: none;
 
     &_texto{
         margin-left: 5px;

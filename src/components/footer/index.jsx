@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className={styles.footer}>
         <section>
             <div>
-            <Logo className={styles.logo}></Logo>
+            <Logo className={styles.logo} cor={"#FFF"}></Logo>
             </div>
             <nav>
                 <Link className={styles.link}>acesso</Link>

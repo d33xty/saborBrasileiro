@@ -7,7 +7,7 @@ import styles from './headerSearch.module.scss'
 export default function HeaderSearch({cor}) {
   return (
     <div className={styles.headerSearch_container} style={{borderColor: cor}} >
-        <Logo></Logo>
+        <Logo cor={cor}></Logo>
         <div className={styles.headerSearch_container_search} style={{borderColor: cor, color:cor}}>
             <input type="text" placeholder='pesquisar' style={{color: cor} } className={cor === "#FFF" ? styles.claro : styles.escuro}/>
             <AiOutlineSearch size={25}></AiOutlineSearch>
