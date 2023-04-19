@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 export default function HeaderSearch({cor}) {
 
-  var [ativo, setAtivo] = useState(false);
+  var [ativo, setAtivo] = useState(true);
 
   function alterarAtivo(){
     if (ativo === false) {
