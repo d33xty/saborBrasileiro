@@ -9,14 +9,28 @@
         background-size: cover;
         border-radius: 10px;
     }
-
+    
+    & .produto{
+        margin: 0;
+        padding-bottom: .5rem;
+        text-align: center;
+    }
     & section{
         display: flex;
         justify-content: space-between;
-        padding: .5rem 1rem;
+        padding: 0 1rem;
+        align-items: center;
 
         & .preco{
             color: #DA2828;
+            font-weight: 700;
+        }
+
+        & button{
+            background: transparent;
+            border: none;
+            color: #DA2828;
+            cursor: pointer;
         }
     }
 }

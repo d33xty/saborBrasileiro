@@ -6,7 +6,9 @@
     position: relative;
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 2.5rem;
+    border: 1px solid #DA2828;
+    border-radius: 5px;
 
     & ul{
         list-style: none;
