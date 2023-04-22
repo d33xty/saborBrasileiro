@@ -5,11 +5,11 @@ import produtos from '../../json/produtos.json'
 import CardCardapio from '../../components/cardCardapio'
 import Footer from '../../components/footer'
 
-export default function Cardapio({adicionarItem,verListaItens}) {
+export default function Cardapio({adicionarItem,itensCarrinho,atualizaValor,atualizaQuantidade}) {
   return (
     <div className={styles.cardapio}>
       <header>
-        <HeaderSearch cor={"#000"} adicionarItem={adicionarItem} verListaItens={verListaItens}></HeaderSearch>
+        <HeaderSearch cor={"#000"}itensCarrinho={itensCarrinho} atualizaValor={atualizaValor} atualizaQuantidade={atualizaQuantidade}></HeaderSearch>
       </header>
       <main>
         <h1>cardapio</h1>
@@ -24,7 +24,7 @@ export default function Cardapio({adicionarItem,verListaItens}) {
         </section>
         <section className={styles.cardapioLista}>
           <ul>
-            {produtos.map(produto => <li key={produto.id} className={styles.li}><CardCardapio produto={produto} adicionarItem={adicionarItem}></CardCardapio></li>)}
+            {produtos.map(produto => <li key={produto.id} className={styles.li}><CardCardapio produto={produto} adicionarItem={adicionarItem} itensCarrinho={itensCarrinho}></CardCardapio></li>)}
           </ul>
         </section>
       </main>

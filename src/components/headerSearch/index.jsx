@@ -5,8 +5,7 @@ import styles from './headerSearch.module.scss'
 import Carrinho from '../carrinho'
 import { useState } from 'react'
 
-export default function HeaderSearch({cor, adicionarItem, verListaItens}) {
-
+export default function HeaderSearch({cor,itensCarrinho,atualizaValor,atualizaQuantidade}) {
   var [ativo, setAtivo] = useState(true);
 
   function alterarAtivo(){
@@ -27,9 +26,10 @@ export default function HeaderSearch({cor, adicionarItem, verListaItens}) {
         <nav>
             <Link to={"/"}><AiFillShop className={styles.headerSearch_container_icons} style={{color: cor}}></AiFillShop></Link>
             <Link to={"/"}><AiOutlineUser className={styles.headerSearch_container_icons} style={{color: cor}}></AiOutlineUser></Link>
-            <button to={"/"}><AiOutlineShoppingCart className={styles.headerSearch_container_icons} style={{color: cor}} onClick={alterarAtivo}></AiOutlineShoppingCart></button>
+            <button to={"/"}><AiOutlineShoppingCart className={styles.headerSearch_container_icons} style={itensCarrinho.length > 0 ? {color: "#DA2828"} : {color: cor}} onClick={alterarAtivo}></AiOutlineShoppingCart></button>
         </nav>
-        <Carrinho ativo={ativo} ativarAtivo={alterarAtivo} adicionarItem={adicionarItem} verListaItens={verListaItens}></Carrinho>
+        {console.log(atualizaValor)}
+        <Carrinho ativo={ativo} alterarAtivo={alterarAtivo} itensCarrinho={itensCarrinho} atualizaValor={atualizaValor} atualizaQuantidade={atualizaQuantidade}></Carrinho>
     </div>
   )
 }

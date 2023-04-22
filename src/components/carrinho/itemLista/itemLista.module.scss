@@ -1,0 +1,20 @@
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & div{
+        display: flex;
+        align-items: center;
+        & span{
+            margin: 0 .5rem;
+        }
+        & button{
+            color: #DA2828;
+            background-color: transparent;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+        }
+    }
+}

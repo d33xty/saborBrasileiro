@@ -7,15 +7,16 @@ import produtos from '../../json/produtos.json'
 import ListaRolavel from '../../components/listaRolavel'
 import Footer from '../../components/footer'
 
-export default function PaginaInicial({adicionarItem, verListaItens}) {
+export default function PaginaInicial({adicionarItem,itensCarrinho,atualizaValor,atualizaQuantidade}) {
   /* function randomList(max) {
     return Math.floor(Math.random() * max);
   } */
   /* const numeroRandomizado = randomList(produtos.length) */
+  console.log(adicionarItem);
   return (
     <div className={styles.paginaInicial}>
         <section className={styles.header_container}>
-            <HeaderSearch cor={"#FFF"} adicionarItem={adicionarItem} verListaItens={verListaItens}></HeaderSearch>
+            <HeaderSearch cor={"#FFF"} adicionarItem={adicionarItem} itensCarrinho={itensCarrinho} atualizaQuantidade={atualizaQuantidade} atualizaValor={atualizaValor}></HeaderSearch>
             <div className={styles.header_container_h1}>
               <h1>Descubra os sabores autênticos do <span>Brasil</span> em cada mordida</h1>
             </div>
