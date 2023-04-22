@@ -1,11 +1,10 @@
-import React from 'react'
 import HeaderSearch from '../../components/headerSearch'
 import styles from './cardapio.module.scss'
 import produtos from '../../json/produtos.json'
 import CardCardapio from '../../components/cardCardapio'
 import Footer from '../../components/footer'
 
-export default function Cardapio({adicionarItem,itensCarrinho,atualizaValor,atualizaQuantidade}) {
+export default function Cardapio({adicionarItem,itensCarrinho,atualizaValor,atualizaQuantidade,ativacao}) {
   return (
     <div className={styles.cardapio}>
       <header>
@@ -28,6 +27,11 @@ export default function Cardapio({adicionarItem,itensCarrinho,atualizaValor,atua
           </ul>
         </section>
       </main>
+      <section className={styles.itemAdicionado_container}>
+        <div className={styles.itemAdicionado} style={ativacao === true ? {bottom: "1rem"} : {bottom: "-4rem"}}>
+          <p>item adicionado</p>
+        </div>
+      </section>
       <Footer></Footer>
     </div>
   )

@@ -39,6 +39,7 @@ function RoutesApp() {
     const itemBuscado = itensCarrinho.filter(item => item.id === itemAtual.id);
     if (itemBuscado.length === 0) {
       SetItensCarrinho([...itensCarrinho, {...itemAtual , quantidade: 1}]);
+      ativaDica();
     }else{
       SetItensCarrinho(itensCarrinho.map(item => {
         if(item.id === itemAtual.id){
@@ -48,12 +49,22 @@ function RoutesApp() {
       }))
     }
   }
+
+  const [ativacao, SetAtivacao] = useState(false)
+  
+  function ativaDica() {
+    if (ativacao === false) {
+      SetAtivacao(true);
+      setTimeout(() => SetAtivacao(false), 2000)
+    }
+  }
+
   return (
     <div className="Routes">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<PaginaInicial adicionarItem={adicionaItem} itensCarrinho={itensCarrinho} atualizaValor={valorCompra} atualizaQuantidade={atualizaQuantidade}></PaginaInicial>}></Route>
-          <Route path="cardapio" element={<Cardapio adicionarItem={adicionaItem} itensCarrinho={itensCarrinho} atualizaValor={valorCompra} atualizaQuantidade={atualizaQuantidade}></Cardapio>}></Route>
+          <Route path="cardapio" element={<Cardapio adicionarItem={adicionaItem} itensCarrinho={itensCarrinho} atualizaValor={valorCompra} atualizaQuantidade={atualizaQuantidade} ativacao={ativacao}></Cardapio>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

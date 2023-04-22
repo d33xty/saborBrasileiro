@@ -58,6 +58,26 @@
     }
 }
 
+.itemAdicionado{
+    position: fixed;
+    background-color: #DA2828;
+    color: #FFF;
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: .5s;
+    & p{
+        margin: 0;
+    }
+
+    &_container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .li{
     min-width: 18%;
 }

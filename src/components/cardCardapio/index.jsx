@@ -9,7 +9,9 @@ export default function CardCardapio({produto, adicionarItem}) {
         <div className={styles.imagem} style={{backgroundImage: `url(/assets/img/produtos/${produto.id}/capa.png)`}}></div>
         <section>
             <p className={styles.preco}>R${produto.preco.toFixed(2).toString().replace(".", ",")}</p>
-            <button onClick={() => adicionarItem(produto)}><BsCartPlus size={20}></BsCartPlus></button>
+            <button onClick={() => {
+              adicionarItem(produto);
+            }}><BsCartPlus size={20}></BsCartPlus></button>
         </section>
     </div>
   )
