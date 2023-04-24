@@ -86,4 +86,10 @@
     .li{
         width: 100%;
     }
+    
+    .cardapio{
+    font-family: 'Montserrat', sans-serif;
+    & header{
+        padding: 0 2.5rem;
+    }
 }
