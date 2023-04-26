@@ -3,6 +3,7 @@ import ItemLista from './itemLista'
 import styles from './carrinho.module.scss'
 import {BsFillCartCheckFill} from 'react-icons/bs'
 import {AiFillCloseCircle} from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 export default function Carrinho({itensCarrinho,atualizaQuantidade,atualizaValor,ativo, alterarAtivo}) {
     const valor = atualizaValor.toFixed(2).toString().replace(".", ",");
@@ -14,7 +15,7 @@ export default function Carrinho({itensCarrinho,atualizaQuantidade,atualizaValor
           {itensCarrinho.length > 0 ? itensCarrinho.length > 0 ? itensCarrinho.map(item => <ItemLista produto={item} atualizaQuantidade={atualizaQuantidade}></ItemLista>) : "" : <p className={styles.carrinho_sacolaVazia}>sacola vazia :(</p>}
         </ul>
         <p className={styles.carrinho_valor}><span>valor total:</span>R${valor}</p>
-        <button className={styles.carrinho_comprar}>Comprar</button>
+        <Link to={'/form'} className={styles.carrinho_comprar}>Comprar</Link>
     </div>
   )
 }

@@ -1,10 +1,21 @@
 import HeaderSearch from '../../components/headerSearch'
 import styles from './cardapio.module.scss'
-import produtos from '../../json/produtos.json'
+import produtosBase from '../../json/produtos.json'
 import CardCardapio from '../../components/cardCardapio'
 import Footer from '../../components/footer'
+import { useState } from 'react'
 
 export default function Cardapio({adicionarItem,itensCarrinho,atualizaValor,atualizaQuantidade,ativacao}) {
+  const [produtos, setProdutos] = useState(produtosBase)
+  const tipos = ['todos','refeicao','sobremesa','bebida','salgado']
+
+  function filtraTipo(tipo) {
+    if (tipo === 'todos') {
+      setProdutos(produtosBase)
+    }else{
+      setProdutos(produtosBase.filter(produto => produto.tipo === tipo))
+    }
+  }
   return (
     <div className={styles.cardapio}>
       <header>
@@ -15,14 +26,11 @@ export default function Cardapio({adicionarItem,itensCarrinho,atualizaValor,atua
         <section className={styles.filtro}>
           <p>filtrar por:</p>
           <ul>
-            <li>filtro</li>
-            <li>filtro</li>
-            <li>filtro</li>
-            <li>filtro</li>
+            {tipos.map(tipo => <button onClick={() => filtraTipo(tipo)}>{tipo}</button>)}
           </ul>
         </section>
         <section className={styles.cardapioLista}>
-          <ul>
+          <ul style={produtos.length < 5 ? {justifyContent: 'flex-start'} : {justifyContent: 'space-evenly'}}>
             {produtos.map(produto => <li key={produto.id} className={styles.li}><CardCardapio produto={produto} adicionarItem={adicionarItem} itensCarrinho={itensCarrinho}></CardCardapio></li>)}
           </ul>
         </section>

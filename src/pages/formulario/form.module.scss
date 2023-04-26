@@ -1,0 +1,14 @@
+.form{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+
+    & h1{
+        display: flex;
+        align-items: center;
+        color: #DA2828;
+    }
+}

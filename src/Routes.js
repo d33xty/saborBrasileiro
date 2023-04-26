@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PaginaInicial from "./pages/paginaInicial";
 import Cardapio from "./pages/cardapio";
 import { useState } from "react";
+import Formulario from "./pages/formulario";
 
 function RoutesApp() {
   const [itensCarrinho, SetItensCarrinho] = useState([]);
@@ -65,6 +66,8 @@ function RoutesApp() {
         <Routes>
           <Route path="/" element={<PaginaInicial adicionarItem={adicionaItem} itensCarrinho={itensCarrinho} atualizaValor={valorCompra} atualizaQuantidade={atualizaQuantidade}></PaginaInicial>}></Route>
           <Route path="cardapio" element={<Cardapio adicionarItem={adicionaItem} itensCarrinho={itensCarrinho} atualizaValor={valorCompra} atualizaQuantidade={atualizaQuantidade} ativacao={ativacao}></Cardapio>}></Route>
+          <Route path="*" element={<p>nao encontrado</p>}></Route>
+          <Route path="form" element={<Formulario adicionarItem={adicionaItem} itensCarrinho={itensCarrinho} atualizaValor={valorCompra} atualizaQuantidade={atualizaQuantidade} ativacao={ativacao}></Formulario>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

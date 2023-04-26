@@ -8,6 +8,5 @@
   { "id": 6, "produto": "chimarrão", "preco": 4.5, "tipo": "bebida" },
   { "id": 7, "produto": "açai", "preco": 10.0, "tipo": "sobremesa" },
   { "id": 8, "produto": "caldo de cana", "preco": 3.5, "tipo": "bebida" },
-  { "id": 9, "produto": "arroz com feijão", "preco": 18.9, "tipo": "refeicao" },
-  { "id": 10, "produto": "brigadeiro", "preco": 7.50, "tipo": "sobremesa" }
+  { "id": 9, "produto": "arroz com feijão", "preco": 18.9, "tipo": "refeicao" }
 ]

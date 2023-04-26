@@ -1,5 +1,5 @@
 import Logo from '../logo'
-import {AiOutlineSearch,AiFillShop,AiOutlineUser,AiOutlineShoppingCart} from 'react-icons/ai'
+import {AiOutlineHome,AiFillShop,AiOutlineShoppingCart} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import styles from './headerSearch.module.scss'
 import Carrinho from '../carrinho'
@@ -7,7 +7,6 @@ import { useState } from 'react'
 
 export default function HeaderSearch({cor,itensCarrinho,atualizaValor,atualizaQuantidade}) {
   var [ativo, setAtivo] = useState(true);
-
   function alterarAtivo(){
     if (ativo === false) {
       setAtivo(true);
@@ -19,14 +18,10 @@ export default function HeaderSearch({cor,itensCarrinho,atualizaValor,atualizaQu
   return (
     <div className={styles.headerSearch_container} style={{borderColor: cor}} >
         <Logo cor={cor}></Logo>
-        <div className={styles.headerSearch_container_search} style={{borderColor: cor, color:cor}}>
-            <input type="text" placeholder='pesquisar' style={{color: cor} } className={cor === "#FFF" ? styles.claro : styles.escuro}/>
-            <AiOutlineSearch size={25}></AiOutlineSearch>
-        </div>
         <nav>
-            <Link to={"/"}><AiFillShop className={styles.headerSearch_container_icons} style={{color: cor}}></AiFillShop></Link>
-            <Link to={"/"}><AiOutlineUser className={styles.headerSearch_container_icons} style={{color: cor}}></AiOutlineUser></Link>
-            <button to={"/"}><AiOutlineShoppingCart className={styles.headerSearch_container_icons} style={itensCarrinho.length > 0 ? {color: "#DA2828"} : {color: cor}} onClick={alterarAtivo}></AiOutlineShoppingCart></button>
+            <Link to={"/"}><AiOutlineHome className={styles.headerSearch_container_icons} style={{color: cor}}></AiOutlineHome></Link>
+            <Link to={"/cardapio"}><AiFillShop className={styles.headerSearch_container_icons} style={{color: cor}}></AiFillShop></Link>
+            <button><AiOutlineShoppingCart className={styles.headerSearch_container_icons} style={itensCarrinho.length > 0 ? {color: "#DA2828"} : {color: cor}} onClick={alterarAtivo}></AiOutlineShoppingCart></button>
         </nav>
         {console.log(atualizaValor)}
         <Carrinho ativo={ativo} alterarAtivo={alterarAtivo} itensCarrinho={itensCarrinho} atualizaValor={atualizaValor} atualizaQuantidade={atualizaQuantidade}></Carrinho>

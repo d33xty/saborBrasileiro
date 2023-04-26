@@ -12,9 +12,8 @@ export default function Footer() {
             <Logo className={styles.logo} cor={"#FFF"}></Logo>
             </div>
             <nav>
-                <Link className={styles.link}>acesso</Link>
-                <Link className={styles.link}>acesso</Link>
-                <Link className={styles.link}>acesso</Link>
+                <Link to={'/'} className={styles.link}>pagina inicial</Link>
+                <Link to={"/cardapio"} className={styles.link}>cardapio</Link>
             </nav>
         </section>
         <p><AiOutlineCopyrightCircle></AiOutlineCopyrightCircle>copyright by saborbrasileiro</p>
